@@ -104,26 +104,30 @@ if (processed == false)
 draw_surface(the_surface,draw_left,draw_top)
 
 
-if (mouse_check_button_pressed(mb_left)) 
-{
-	new_draw_left = mouse_x
-	new_draw_top = mouse_y
-	new_val_left = map(mouse_x,draw_left,draw_right,val_left,val_right)
-	new_val_top = map(mouse_y,draw_top,draw_bottom,val_top,val_bottom)
-}
+#region -- Used for zooming -- 
 
-if (mouse_check_button_pressed(mb_right)) 
-{
-	new_draw_right = mouse_x
-	new_draw_bottom = mouse_y
-	new_val_right = map(mouse_x,draw_left,draw_right,val_left,val_right)
-	new_val_bottom = map(mouse_y,draw_top,draw_bottom,val_top,val_bottom)
-	processed = false
-	val_left = new_val_left
-	val_right = new_val_right
-	val_top = new_val_top
-	val_bottom = new_val_bottom
-}
+	if (mouse_check_button_pressed(mb_left)) 
+	{
+		new_draw_left = mouse_x
+		new_draw_top = mouse_y
+		new_val_left = map(mouse_x,draw_left,draw_right,val_left,val_right)
+		new_val_top = map(mouse_y,draw_top,draw_bottom,val_top,val_bottom)
+	}
 
-draw_set_colour(c_white)
-draw_rectangle(new_draw_left,new_draw_top,new_draw_right,new_draw_bottom,true)
+	if (mouse_check_button_pressed(mb_right)) 
+	{
+		new_draw_right = mouse_x
+		new_draw_bottom = mouse_y
+		new_val_right = map(mouse_x,draw_left,draw_right,val_left,val_right)
+		new_val_bottom = map(mouse_y,draw_top,draw_bottom,val_top,val_bottom)
+		processed = false
+		val_left = new_val_left
+		val_right = new_val_right
+		val_top = new_val_top
+		val_bottom = new_val_bottom
+	}
+
+	draw_set_colour(c_white)
+	draw_rectangle(new_draw_left,new_draw_top,new_draw_right,new_draw_bottom,true)
+
+#endregion
