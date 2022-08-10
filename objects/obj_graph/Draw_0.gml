@@ -12,6 +12,7 @@ if (processed == false)
 	new_draw_right = 0 
 	new_draw_top = 0 
 	new_draw_bottom = 0 
+	left_picked = false
 	
 
 	surface_set_target(the_surface)
@@ -113,6 +114,7 @@ draw_surface(the_surface,draw_left,draw_top)
 		new_draw_top = mouse_y
 		new_val_left = map(mouse_x,draw_left,draw_right,val_left,val_right)
 		new_val_top = map(mouse_y,draw_top,draw_bottom,val_top,val_bottom)
+		left_picked = true
 	}
 
 	if (mouse_check_button_pressed(mb_right)) 
@@ -131,7 +133,13 @@ draw_surface(the_surface,draw_left,draw_top)
 	
 
 	draw_set_colour(c_white)
-	draw_rectangle(new_draw_left,new_draw_top,new_draw_right,new_draw_bottom,true)
+	if (left_picked) { 
+		draw_rectangle(mouse_x,mouse_y,new_draw_left,new_draw_top,true)
+	}
+	else 
+	{
+		draw_rectangle(new_draw_left,new_draw_top,new_draw_right,new_draw_bottom,true)
+	}
 	
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)
@@ -139,6 +147,5 @@ draw_surface(the_surface,draw_left,draw_top)
 	draw_text(draw_debug_x,draw_debug_y+20,new_val_bottom)
 	draw_text(draw_debug_x+100,draw_debug_y,new_val_right)
 	draw_text(draw_debug_x-100,draw_debug_y,new_val_left)
-
 
 #endregion

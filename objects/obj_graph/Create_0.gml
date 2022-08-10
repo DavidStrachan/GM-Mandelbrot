@@ -27,6 +27,8 @@ new_val_right = 0
 new_val_top = 0 
 new_val_bottom = 0 
 
+left_picked = false // should we draw the box at the bottom?
+
 // This is used to draw the rectangle that we will zoom into. 
 new_draw_left = 0 
 new_draw_right = 0 
