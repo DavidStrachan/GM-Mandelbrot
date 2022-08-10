@@ -33,3 +33,8 @@ new_draw_right = 0
 new_draw_top = 0 
 new_draw_bottom = 0 
 
+// Draw some debug values to the screen 
+draw_debug_x = draw_width + 150
+draw_debug_y = draw_height/2
+
+

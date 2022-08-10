@@ -86,6 +86,7 @@ if (processed == false)
 					// Turn it into a colour
 					//iteration = clamp(iteration,0,255)
 					iteration = clamp(iteration*iteration,0,255) // Used for better distinction of colours 
+					//draw_set_colour(make_colour_hsv(iteration,250,100))
 					draw_set_colour(make_colour_hsv(100,100,iteration))
 					
 					// Draw this value
@@ -127,7 +128,17 @@ draw_surface(the_surface,draw_left,draw_top)
 		val_bottom = new_val_bottom
 	}
 
+	
+
 	draw_set_colour(c_white)
 	draw_rectangle(new_draw_left,new_draw_top,new_draw_right,new_draw_bottom,true)
+	
+	draw_set_halign(fa_center)
+	draw_set_valign(fa_middle)
+	draw_text(draw_debug_x,draw_debug_y-20,new_val_top)
+	draw_text(draw_debug_x,draw_debug_y+20,new_val_bottom)
+	draw_text(draw_debug_x+100,draw_debug_y,new_val_right)
+	draw_text(draw_debug_x-100,draw_debug_y,new_val_left)
+
 
 #endregion
