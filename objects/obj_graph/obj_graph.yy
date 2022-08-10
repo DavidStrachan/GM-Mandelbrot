@@ -29,7 +29,7 @@
     "path": "folders/ROOM game.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_test",
+  "name": "obj_graph",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -81,7 +81,7 @@
     {"id":{"name":"ease_combine","path":"scripts/ease_combine/ease_combine.yy",},"order":1,},
     {"id":{"name":"EaseInOutExpo","path":"scripts/EaseInOutExpo/EaseInOutExpo.yy",},"order":17,},
     {"id":{"name":"EaseWaveCos5","path":"scripts/EaseWaveCos5/EaseWaveCos5.yy",},"order":53,},
-    {"id":{"name":"obj_test","path":"objects/obj_test/obj_test.yy",},"order":1,},
+    {"id":{"name":"obj_graph","path":"objects/obj_graph/obj_graph.yy",},"order":1,},
     {"id":{"name":"EaseWaveCos4","path":"scripts/EaseWaveCos4/EaseWaveCos4.yy",},"order":52,},
     {"id":{"name":"EaseInQuart","path":"scripts/EaseInQuart/EaseInQuart.yy",},"order":23,},
     {"id":{"name":"TODO","path":"notes/TODO/TODO.yy",},"order":9,},
