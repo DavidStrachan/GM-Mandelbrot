@@ -39,4 +39,10 @@ new_draw_bottom = 0
 draw_debug_x = draw_width + 150
 draw_debug_y = draw_height/2
 
+colour_1_r = 89
+colour_1_g = 115
+colour_1_b = 114
 
+colour_2_r = 218
+colour_2_g = 209
+colour_2_b = 194

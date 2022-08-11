@@ -85,10 +85,12 @@ if (processed == false)
 		
 
 					// Turn it into a colour
-					//iteration = clamp(iteration,0,255)
-					iteration = clamp(iteration*iteration,0,255) // Used for better distinction of colours 
+					iteration = clamp(iteration,0,max_iteration)
+					//iteration = clamp(iteration*iteration,0,255) // Used for better distinction of colours 
 					//draw_set_colour(make_colour_hsv(iteration,250,100))
-					draw_set_colour(make_colour_hsv(100,100,iteration))
+					draw_set_colour(make_colour_rgb(map(iteration,0,max_iteration,colour_1_r,colour_2_r),
+													map(iteration,0,max_iteration,colour_1_g,colour_2_g),
+													map(iteration,0,max_iteration,colour_1_b,colour_2_b)))
 					
 					// Draw this value
 					draw_point(w,h)
